@@ -14,5 +14,5 @@ func Gustavo(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, err.Error())
 		return
 	}
-	fmt.Fprintf(w, string(body))
+	fmt.Fprintf(w, r.URL.Path)
 }
